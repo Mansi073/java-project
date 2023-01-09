@@ -53,7 +53,7 @@ using namespace std;
     Node* next;
   Node(int data){
       this -> data = data;
-      this -> next = Null;
+      this -> next = NULL;
   }
     
 };
