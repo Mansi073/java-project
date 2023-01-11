@@ -104,4 +104,19 @@ int main() {
        print(head);
 
     return 0;
-}
+} sum of array in bitwise( example a[5]=1 2 3 4 5.==output 1+2+3+4+5=15 //
+	#include <iostream> 
+using namespace std;
+
+int main() {
+    long n,sum=o;
+    cin>>n;
+    int arr[n];
+    for(i=0;i<n-1;i++){
+        cin>>arr[i];
+        sum=sum+arr[i];
+    } 
+    cout<<sum;
+
+    return 0;
+ }
