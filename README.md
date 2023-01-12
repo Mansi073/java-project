@@ -149,3 +149,62 @@ element not found
 element not found
 element not found
 2
+	largest and minimum or second lagest element in array
+	#include <iostream>
+#include <climits>
+using namespace std;
+  */int secondlargest(int n,int arr[]){
+      int largest=0;
+      int secondlargest=-1;
+      for(int i=0;i<n;i++){
+          if(arr[i]>arr[largest]){
+              largest=i;
+          }
+      }
+      for(int i=0;i<n;i++){
+          if(arr[i]!==arr[largest]){
+              if(secondlargest==-1)
+               secondlargest==i;
+               else(arr[i]>arr[secondlargest]){
+                   secondlargest=i;
+               }
+          }
+      }
+      return secondlargest;
+  }*/
+  
+   int getmin(int arr[],int n){
+    int min= INT_MAX;
+    for(int i=0;i<n;i++){
+        if(arr[i]<min){
+            min=arr[i];
+            
+        }
+    }
+    return min;
+}
+
+int getmax(int arr[],int n){
+    int max= INT_MIN;
+    for(int i=0;i<n;i++){
+        if(arr[i]>max){
+            max=arr[i];
+            
+        }
+    }
+    return max;
+}
+
+int main() {
+    int n;
+    cin>>n;
+    int arr[100];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    } 
+    cout<< "maximum value is"<< getmax(arr,n)<<endl;
+    cout<<"minimum value is "<< getmin(arr,n)<<endl;
+    cout <<"second largest value"<< secondlargest(arr,n)<<endl;(wrong)        
+
+    return 0;
+}
