@@ -119,4 +119,33 @@ int main() {
     cout<<sum;
 
     return 0;
- }
+ } 
+	find first repeating number//in array
+	#include <iostream> 
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    int arr[n];
+    for (int i=0;i<n;i++){
+          cin>>arr[i];
+        
+    } 
+     for(int i=0;i<n;i++)
+         for(int j=i+1;j<n;j++)
+           if( arr[i]==arr[j]){
+               cout<<arr[j]<<endl;
+               return 0;
+           } else
+               cout<<"element not found"<<endl;
+           
+    return 0;
+} output 5 
+1 2 3 2 4
+element not found
+element not found
+element not found
+element not found
+element not found
+2
