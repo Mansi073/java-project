@@ -1,0 +1,29 @@
+array print diagnal/
+#include <iostream> 
+using namespace std;
+
+int main() {
+      int n,m; 
+      cin>>n>>m;
+      int arr[n][m];
+     
+      for(int i=0;i<n;i++){
+          for(int j=0;j<m;j++){
+              cin>>arr[i][j];
+          }
+      }
+      for(int i=0;i<n;i++){
+          for(int j=0;j<m;j++){
+              if(arr[i]==arr[j]){
+                  cout<<arr[i][j]<<" ";
+              }
+          }
+      } 
+      
+    return 0;
+} 3 3
+23 34 45
+56 67 78
+65 90 70
+23 67 70
+now reverse//
