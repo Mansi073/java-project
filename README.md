@@ -208,3 +208,28 @@ int main() {
 
     return 0;
 }
+	//vector sort
+	# include <bits/stdc++.h>
+# include <vector>
+using namespace std;
+int main(){
+    vector<pair<int,int>> v;
+    int arr[]={1 ,9,6,3,5};
+    int arr1[]={7,4,9,5,7};
+    
+    int n= sizeof(arr) /sizeof (arr[0]);
+    for(int i=0;i<n;i++)
+        v.push_back(make_pair(arr[i],arr1[i]));
+        cout<<"before short"<<endl;
+    
+    for(int i=0;i<n;i++){
+        cout<<v[i].first<<" "<<v[i].second<<endl;
+    }
+    sort(v.begin(),v.end());
+    cout <<"after short"<<endl;
+    for(int i=0;i<n;i++){
+                cout<<v[i].first<<" "<<v[i].second<<endl;
+    }
+    
+    return 0;
+}
