@@ -233,3 +233,18 @@ int main(){
     
     return 0;
 }
+erase vector
+#include <iostream>
+# include <vector>
+using namespace std;
+int main() {
+      vector<int>myvector{1,3,5,7,8};
+      vector<int>::iterator it;
+      it =myvector.begin();
+      myvector.erase(it);
+      for(auto it=myvector.begin();it!=myvector.end();++it)
+          cout<<*it<<endl;
+      
+
+    return 0;
+}output  3456
