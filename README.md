@@ -358,5 +358,14 @@ int main() {
 	 //inser at tail..
 	 InsertAtPosition(tail,head,4,22);
 	 print(head);
-	return 0;
+	 cout<<"head"<<head->data<<endl;
+	 cout<<"tail"<<tail->data<<endl;
+	return 0;output==
+	10 
+10 12 
+10 12 15 
+10 12 15 22 
+head10
+tail22
+
 } deliction start////
