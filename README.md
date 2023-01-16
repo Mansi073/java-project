@@ -248,3 +248,115 @@ int main() {
 
     return 0;
 }output  3456
+	LINKED LIST INSERT
+	#include <iostream>
+using namespace std;
+class Node{
+	public:
+	int data;
+	Node* next;
+	Node(int data){
+		this-> data=data;
+		this-> next=NULL;
+	}
+};insert at head////
+ void InsertAtHead(Node* &head,int d){
+ 	Node* temp=new Node(d);
+ 	temp->next=head;
+ 	head=temp;
+ 	
+ }insert at tail///
+	void InsertAtTail(Node* &tail,int d){
+     Node* temp=new Node(d);
+     tail->next=temp;
+     tail=temp;
+ }
+ trivers///
+ void print(Node* &head){   
+     Node* temp=head;
+     while(temp!=NULL){
+     cout<<temp->data<<" ";
+     temp=temp->next;
+   }
+   cout<<endl;
+ }
+int main() {
+	Node* node1=new Node(10);
+	Node* head=node1;
+	print(head);
+	 InsertAtHead(head,12);
+	 print(head);
+	 InsertAtHead(head,15);
+	 print(head);
+	 
+	return 0;
+}#include <iostream>
+using namespace std;
+class Node{
+	public:
+	int data;
+	Node* next;
+	Node(int data){
+		this-> data=data;
+		this-> next=NULL;
+	}
+}; insertat mid first and last;
+ void InsertAtHead(Node* &head,int d){
+ 	Node* temp=new Node(d);
+ 	temp->next=head;
+ 	head=temp;
+ 	
+ }
+ void InsertAtTail(Node* &tail,int d){
+     Node* temp=new Node(d);
+     tail->next=temp;
+     tail=temp;
+ }
+ void InsertAtPosition(Node* &tail,Node* &head,int Position,int d){
+	///insert at first position//
+	if(Position==1){
+         InsertAtHead(head,d);
+         return;
+	}
+     Node* temp=head;
+    int cnt=1;
+     while(cnt<Position-1){
+         temp=temp->next;
+         cnt++;
+     }
+	insertat last position//
+	if(temp->next==NULL){
+         InsertAtTail( tail,d);
+         return;
+     }
+     Node* nodeToInsert=new Node(d);
+     nodeToInsert->next=temp->next;
+     temp->next=nodeToInsert;
+     
+ }
+ 
+ void print(Node* &head){
+     Node* temp=head;
+     while(temp!=NULL){
+     cout<<temp->data<<" ";
+     temp=temp->next;
+   }
+   cout<<endl;
+ }
+int main() {
+	Node* node1=new Node(10);
+	Node* head=node1;
+	Node* tail=node1;
+	print(head);
+	 InsertAtTail(tail,12);
+	 print(head);
+	 InsertAtTail(tail,15);
+	 print(head);
+	 
+	 InsertAtPosition(head,3,22);
+	 print(head);
+	 //inser at tail..
+	 InsertAtPosition(tail,head,4,22);
+	 print(head);
+	return 0;
+} deliction start////
